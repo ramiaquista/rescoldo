@@ -1,0 +1,6 @@
+html, body { margin: 0; overflow-x: hidden; }
+a { color: var(--color-accent-700); text-decoration: none; }
+a:hover { color: var(--color-accent-900); text-decoration: underline; }
+.chip { text-decoration: none; }
+.chip:hover { text-decoration: none; }
+#root { min-height: 100vh; }
