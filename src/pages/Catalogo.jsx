@@ -30,7 +30,7 @@ export default function Catalogo() {
           <div className="rs-grid-4" style={{ gap: "var(--space-4)" }}>
             {productsByCategory(c.id).map((p) => (
               <Link key={p.slug} to={`/producto/${p.slug}`} className="card" style={{ textDecoration: "none", color: "inherit", padding: 0, overflow: "hidden" }}>
-                <ImagePlaceholder label={p.name} style={{ width: "100%", aspectRatio: "1" }} />
+                <ImagePlaceholder src={p.image} label={p.name} style={{ width: "100%", aspectRatio: "1" }} />
                 <div style={{ padding: "var(--space-3)" }}>
                   <div className="card-title" style={{ fontSize: 16 }}>{p.name}</div>
                   <p className="card-body" style={{ margin: "var(--space-1) 0 0" }}>Consultar precio</p>

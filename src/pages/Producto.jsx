@@ -26,8 +26,8 @@ export default function Producto() {
 
       <section className="rs-grid-2" style={{ padding: "var(--space-4) 0 var(--space-7)", gap: "var(--space-7)", alignItems: "start" }}>
         <div>
-          <figure className="washed" style={{ margin: 0, borderRadius: "calc(2*var(--radius-lg))", overflow: "hidden" }}>
-            <ImagePlaceholder label="Foto principal del producto" style={{ width: "100%", aspectRatio: "1" }} />
+          <figure style={{ margin: 0, borderRadius: "calc(2*var(--radius-lg))", overflow: "hidden" }}>
+            <ImagePlaceholder src={product.image} label="Foto principal del producto" style={{ width: "100%", aspectRatio: "1" }} />
           </figure>
           <div className="rs-grid-4" style={{ gap: "var(--space-3)", marginTop: "var(--space-3)" }}>
             {["Foto 2", "Foto 3", "Foto 4", "En uso"].map((l) => (
@@ -66,7 +66,7 @@ export default function Producto() {
         <div className="rs-grid-4" style={{ gap: "var(--space-4)" }}>
           {related.map((p) => (
             <Link key={p.slug} to={`/producto/${p.slug}`} className="card" style={{ textDecoration: "none", color: "inherit", padding: 0, overflow: "hidden" }}>
-              <ImagePlaceholder label={p.name} style={{ width: "100%", aspectRatio: "1" }} />
+              <ImagePlaceholder src={p.image} label={p.name} style={{ width: "100%", aspectRatio: "1" }} />
               <div style={{ padding: "var(--space-3)" }}><div className="card-title" style={{ fontSize: 16 }}>{p.name}</div></div>
             </Link>
           ))}

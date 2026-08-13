@@ -17,8 +17,8 @@ export default function Home() {
             <Link to="/catalogo" className="btn btn-ghost">Ver catálogo</Link>
           </div>
         </div>
-        <figure className="washed" style={{ margin: 0, borderRadius: "calc(2*var(--radius-lg))", overflow: "hidden" }}>
-          <ImagePlaceholder label="Foto de un asado en uso" style={{ width: "100%", aspectRatio: "4/3" }} />
+        <figure style={{ margin: 0, borderRadius: "calc(2*var(--radius-lg))", overflow: "hidden" }}>
+          <ImagePlaceholder src="/products/hero-main-2.jpg" label="Foto de un asado en uso" style={{ width: "100%", aspectRatio: "4/3" }} />
         </figure>
       </section>
 
@@ -75,7 +75,7 @@ export default function Home() {
         <div className="rs-grid-5" style={{ gap: "var(--space-4)" }}>
           {CATEGORIES.map((c) => (
             <Link key={c.id} to={`/catalogo#${c.id}`} className="card" style={{ textDecoration: "none", color: "inherit", padding: 0, overflow: "hidden" }}>
-              <ImagePlaceholder label={c.label} style={{ width: "100%", aspectRatio: "1" }} />
+              <ImagePlaceholder src={c.image} label={c.label} style={{ width: "100%", aspectRatio: "1" }} />
               <div style={{ padding: "var(--space-3)" }}><span className="card-title" style={{ fontSize: 16 }}>{c.label}</span></div>
             </Link>
           ))}
