@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(grep *)",
-      "Bash(npx vite *)"
+      "Bash(npx vite *)",
+      "Bash(pkill -f \"vite preview\")"
     ]
   }
 }
