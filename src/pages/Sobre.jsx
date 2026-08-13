@@ -56,8 +56,8 @@ export default function Sobre() {
       </section>
 
       <section id="envios" className="rs-grid-2" style={{ padding: "var(--space-7) 0", gap: "var(--space-7)", alignItems: "center" }}>
-        <figure className="washed" style={{ margin: 0, borderRadius: "calc(2*var(--radius-lg))", overflow: "hidden" }}>
-          <ImagePlaceholder label="Foto de producto embalado" style={{ width: "100%", aspectRatio: "4/3" }} />
+        <figure style={{ margin: 0, borderRadius: "calc(2*var(--radius-lg))", overflow: "hidden" }}>
+          <ImagePlaceholder src="/products/packaging-1.jpg" label="Foto de producto embalado" style={{ width: "100%", aspectRatio: "4/3" }} />
         </figure>
         <div>
           <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Cómo compras</span>

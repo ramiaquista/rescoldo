@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import ImagePlaceholder from "../components/ImagePlaceholder";
 import { CATEGORIES } from "../data/products";
-import { waLink, INSTAGRAM_URL } from "../config";
+import { waLink } from "../config";
 
 export default function Home() {
   return (
@@ -113,21 +113,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "var(--space-8) 0" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "var(--space-4)", flexWrap: "wrap", marginBottom: "var(--space-5)" }}>
-          <div>
-            <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-2)" }}>Comunidad</span>
-            <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: 32, margin: 0 }}>La quedada, en fotos</h2>
-          </div>
-          <a href={INSTAGRAM_URL} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">Síguenos @rescoldo</a>
-        </div>
-        <div className="rs-grid-4" style={{ gap: "var(--space-3)" }}>
-          {[1, 2, 3, 4].map((i) => (
-            <ImagePlaceholder key={i} shape="rounded" label="Foto de Instagram" style={{ width: "100%", aspectRatio: "1" }} />
-          ))}
         </div>
       </section>
 
