@@ -6,14 +6,7 @@ import { waLink } from "../config";
 export default function Home() {
   return (
     <>
-      <section className="rs-grid-2" style={{ position: "relative", zIndex: 0, overflow: "hidden", padding: "calc(var(--space-8)*1.4) 0 var(--space-8)", gap: "var(--space-8)", alignItems: "center" }}>
-        <div
-          style={{
-            position: "absolute", right: -80, top: -70, width: 520, height: 520, borderRadius: "50%",
-            background: "radial-gradient(circle, var(--color-accent-500) 0%, var(--color-accent) 38%, transparent 70%)",
-            filter: "blur(30px)", opacity: 0.85, zIndex: -1,
-          }}
-        ></div>
+      <section className="rs-grid-2" style={{ padding: "calc(var(--space-8)*1.4) 0 var(--space-8)", gap: "var(--space-8)", alignItems: "center" }}>
         <div>
           <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Fogoneros y asadores</span>
           <h1 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(38px,5.2vw,64px)", lineHeight: 1.08, margin: 0 }}>El fuego, fácil,<br />accesible y para todos.</h1>
