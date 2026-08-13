@@ -15,6 +15,18 @@ export default function Sobre() {
         </figure>
       </section>
 
+      <section className="rs-grid-2" style={{ padding: "var(--space-7) 0", gap: "var(--space-7)", alignItems: "center" }}>
+        <figure style={{ margin: 0, borderRadius: "calc(2*var(--radius-lg))", overflow: "hidden" }}>
+          <ImagePlaceholder src="/products/fogonero-3.webp" label="Detalle de soldadura a mano" style={{ width: "100%", aspectRatio: "4/3" }} />
+        </figure>
+        <div>
+          <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Cómo lo hacemos</span>
+          <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(24px,2.8vw,32px)", margin: 0, maxWidth: "20ch" }}>Cada pieza sale de un taller, no de una línea de producción</h2>
+          <p style={{ fontSize: 15.5, lineHeight: 1.7, margin: "var(--space-4) 0 0", maxWidth: "48ch", color: "color-mix(in srgb, var(--color-text) 80%, transparent)" }}>Trabajamos el hierro y el acero a mano: se corta, se suelda y se pule pieza por pieza. Por eso tu fogonero no va a ser idéntico al de al lado — una veta distinta en el óxido, una marca de soldadura que cuenta que alguien lo hizo con las manos, no una máquina en serie.</p>
+          <p style={{ fontSize: 15.5, lineHeight: 1.7, margin: "var(--space-3) 0 0", maxWidth: "48ch", color: "color-mix(in srgb, var(--color-text) 80%, transparent)" }}>Así se hacían los fogoneros de toda la vida. Así los seguimos haciendo.</p>
+        </div>
+      </section>
+
       <section className="rs-band rs-logo-watermark" style={{ padding: "var(--space-7) 0" }}>
         <div className="rs-band-inner">
           <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Cómo somos</span>

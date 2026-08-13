@@ -112,6 +112,13 @@ h6 { font-size: 13px; }
 }
 h6 { letter-spacing: 0.08em; text-transform: uppercase; }
 p { margin: 0 0 var(--space-3); }
+
+/* — page transition: a cheap fade+rise on route change, no library — */
+@keyframes rs-page-fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+.rs-page-fade { animation: rs-page-fade 0.32s ease both; }
+@media (prefers-reduced-motion: reduce) {
+  .rs-page-fade { animation: none; }
+}
 a { color: var(--color-accent); text-underline-offset: 3px; }
 img { display: block; max-width: 100%; }
 figure { margin: 0; }
@@ -219,6 +226,8 @@ textarea.input { min-height: 90px; resize: vertical; }
   display: flex; flex-direction: column; gap: var(--space-2);
   padding: var(--space-3); border-radius: var(--radius-md); background: var(--color-surface);
 }
+.card .img-placeholder img { transition: transform 0.35s ease; }
+.card:hover .img-placeholder img { transform: scale(1.06); }
 .card-kicker { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); }
 .card-title {
   font-family: var(--font-heading); font-weight: var(--font-heading-weight);
