@@ -9,7 +9,7 @@ export default function Home() {
       <section className="rs-grid-2" style={{ padding: "calc(var(--space-8)*1.4) 0 var(--space-8)", gap: "var(--space-8)", alignItems: "center" }}>
         <div>
           <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Fogoneros y asadores</span>
-          <h1 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(38px,5.2vw,64px)", lineHeight: 1.08, margin: 0 }}>El fuego, fácil,<br />accesible y para todos.</h1>
+          <h1 className="text-metal" style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(38px,5.2vw,64px)", lineHeight: 1.08, margin: 0 }}>El fuego, fácil,<br />accesible y para todos.</h1>
           <p style={{ fontSize: 17, lineHeight: 1.65, maxWidth: "46ch", margin: "var(--space-5) 0 0", color: "color-mix(in srgb, var(--color-text) 82%, transparent)" }}>No vendemos hierros. Vendemos la excusa perfecta para juntarse: fogoneros, braseros, asadores y parrillas para que tu patio o terraza esté siempre listo para una buena quedada.</p>
           <div style={{ display: "flex", gap: "var(--space-3)", flexWrap: "wrap", marginTop: "var(--space-6)" }}>
             <a href={waLink()} className="btn btn-primary" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp</a>
@@ -24,7 +24,7 @@ export default function Home() {
       <section className="rs-band rs-logo-watermark" style={{ padding: "var(--space-8) 0" }}>
         <div className="rs-band-inner">
           <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Por qué AR Fuegos</span>
-          <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(26px,3vw,34px)", margin: "0 0 var(--space-6)", maxWidth: "36ch" }}>Todo lo bueno de comprar en una ferretería de barrio, sin salir de casa.</h2>
+          <h2 className="text-metal" style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(26px,3vw,34px)", margin: "0 0 var(--space-6)", maxWidth: "36ch" }}>Todo lo bueno de comprar en una ferretería de barrio, sin salir de casa.</h2>
 
           <div className="rs-grid-3" style={{ gap: "var(--space-6)" }}>
             {[
