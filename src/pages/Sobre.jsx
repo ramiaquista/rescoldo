@@ -15,43 +15,43 @@ export default function Sobre() {
         </figure>
       </section>
 
-      <section style={{ position: "relative", zIndex: 0, overflow: "hidden", padding: "var(--space-7) 0" }}>
-        <div style={{ position: "absolute", left: "50%", top: -100, width: 340, height: 340, borderRadius: "50%", background: "var(--color-accent-2-200)", filter: "blur(10px)", opacity: 0.5, zIndex: -1 }}></div>
+      <section className="rs-band rs-flame-bg" style={{ padding: "var(--space-7) 0" }}>
+        <div className="rs-band-inner">
+          <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Cómo somos</span>
+          <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(24px,2.8vw,32px)", margin: "0 0 var(--space-6)", maxWidth: "38ch" }}>Cuatro cosas que no cambiamos</h2>
 
-        <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Cómo somos</span>
-        <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(24px,2.8vw,32px)", margin: "0 0 var(--space-6)", maxWidth: "38ch" }}>Cuatro cosas que no cambiamos</h2>
-
-        <div className="rs-grid-4-tight" style={{ gap: "var(--space-4)" }}>
-          {[
-            {
-              bg: "var(--color-accent-100)", fg: "var(--color-accent-700)",
-              icon: <path d="M12 20.5 4.6 13a4.6 4.6 0 0 1 6.5-6.5l.9.9.9-.9a4.6 4.6 0 0 1 6.5 6.5L12 20.5z" strokeLinejoin="round" />,
-              k: "Cercana", b: "Hablamos como alguien que también hace asados los domingos, no como un manual técnico.",
-            },
-            {
-              bg: "var(--color-accent-2-200)", fg: "var(--color-accent-2-700)",
-              icon: <><path d="M12 3.5 19 6.5v5c0 4.2-3 6.9-7 8.5-4-1.6-7-4.3-7-8.5v-5l7-3z" strokeLinejoin="round" /><path d="m9 12 2 2 4-4.2" /></>,
-              k: "Confiable", b: "Garantía y seriedad de verdad, sin la frialdad de una corporación.",
-            },
-            {
-              bg: "var(--color-accent-100)", fg: "var(--color-accent-700)",
-              icon: <><circle cx="8.5" cy="9" r="2.6" /><circle cx="16" cy="9.5" r="2.1" /><path d="M3.5 19c.6-3 2.5-4.6 5-4.6s4.4 1.6 5 4.6" /><path d="M13.5 14.6c2.1.1 3.8 1.6 4.3 4.4" /></>,
-              k: "Alegre y social", b: "Todo vuelve a lo mismo: juntarse. El producto es la excusa.",
-            },
-            {
-              bg: "var(--color-accent-2-200)", fg: "var(--color-accent-2-700)",
-              icon: <path d="M13 3 5 13.5h5.5L11 21l8-10.8h-5.7L13 3Z" strokeLinejoin="round" />,
-              k: "Simple", b: "Sin tecnicismos innecesarios. Directo, claro, con humor cuando corresponde.",
-            },
-          ].map((x) => (
-            <div key={x.k} className="feature-card elev-sm" style={{ padding: "var(--space-5)", background: "var(--color-surface)" }}>
-              <div className="feature-icon" style={{ width: 44, height: 44, background: x.bg, color: x.fg, marginBottom: "var(--space-3)" }}>
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">{x.icon}</svg>
+          <div className="rs-grid-4-tight" style={{ gap: "var(--space-4)" }}>
+            {[
+              {
+                bg: "var(--color-accent-100)", fg: "var(--color-accent-700)",
+                icon: <path d="M12 20.5 4.6 13a4.6 4.6 0 0 1 6.5-6.5l.9.9.9-.9a4.6 4.6 0 0 1 6.5 6.5L12 20.5z" strokeLinejoin="round" />,
+                k: "Cercana", b: "Hablamos como alguien que también hace asados los domingos, no como un manual técnico.",
+              },
+              {
+                bg: "var(--color-accent-2-200)", fg: "var(--color-accent-2-700)",
+                icon: <><path d="M12 3.5 19 6.5v5c0 4.2-3 6.9-7 8.5-4-1.6-7-4.3-7-8.5v-5l7-3z" strokeLinejoin="round" /><path d="m9 12 2 2 4-4.2" /></>,
+                k: "Confiable", b: "Garantía y seriedad de verdad, sin la frialdad de una corporación.",
+              },
+              {
+                bg: "var(--color-accent-100)", fg: "var(--color-accent-700)",
+                icon: <><circle cx="8.5" cy="9" r="2.6" /><circle cx="16" cy="9.5" r="2.1" /><path d="M3.5 19c.6-3 2.5-4.6 5-4.6s4.4 1.6 5 4.6" /><path d="M13.5 14.6c2.1.1 3.8 1.6 4.3 4.4" /></>,
+                k: "Alegre y social", b: "Todo vuelve a lo mismo: juntarse. El producto es la excusa.",
+              },
+              {
+                bg: "var(--color-accent-2-200)", fg: "var(--color-accent-2-700)",
+                icon: <path d="M13 3 5 13.5h5.5L11 21l8-10.8h-5.7L13 3Z" strokeLinejoin="round" />,
+                k: "Simple", b: "Sin tecnicismos innecesarios. Directo, claro, con humor cuando corresponde.",
+              },
+            ].map((x) => (
+              <div key={x.k} className="feature-card elev-sm" style={{ padding: "var(--space-5)", background: "var(--color-bg)" }}>
+                <div className="feature-icon" style={{ width: 44, height: 44, background: x.bg, color: x.fg, marginBottom: "var(--space-3)" }}>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round">{x.icon}</svg>
+                </div>
+                <div className="card-kicker">{x.k}</div>
+                <p className="card-body" style={{ marginTop: 4 }}>{x.b}</p>
               </div>
-              <div className="card-kicker">{x.k}</div>
-              <p className="card-body" style={{ marginTop: 4 }}>{x.b}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
@@ -67,8 +67,10 @@ export default function Sobre() {
         </div>
       </section>
 
-      <section style={{ padding: "var(--space-6) 0 var(--space-8)" }}>
-        <blockquote style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(22px,2.4vw,30px)", lineHeight: 1.4, maxWidth: "34ch", margin: 0 }}>“El fuego, fácil, accesible y para todos.”</blockquote>
+      <section className="rs-band" style={{ padding: "var(--space-7) 0" }}>
+        <div className="rs-band-inner">
+          <blockquote style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(22px,2.4vw,30px)", lineHeight: 1.4, maxWidth: "34ch", margin: 0 }}>“El fuego, fácil, accesible y para todos.”</blockquote>
+        </div>
       </section>
     </>
   );

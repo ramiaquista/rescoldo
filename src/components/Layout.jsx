@@ -82,6 +82,12 @@ export default function Layout({ children }) {
         </div>
         <div style={{ maxWidth: 1200, margin: "var(--space-6) auto 0", padding: "0 var(--space-6)", fontSize: 13, color: "color-mix(in srgb, var(--color-text) 60%, transparent)" }}>© 2026 AR Fuegos. Todos los derechos reservados.</div>
       </footer>
+
+      <a href={waLink()} className="wa-fab" target="_blank" rel="noopener noreferrer" aria-label="Escribinos por WhatsApp">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 11.6a8.6 8.6 0 0 1-12.9 7.4L4 20l1.1-4A8.6 8.6 0 1 1 21 11.6Z" />
+        </svg>
+      </a>
     </div>
   );
 }
