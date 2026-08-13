@@ -21,7 +21,7 @@ export default function Home() {
         </figure>
       </section>
 
-      <section className="rs-band rs-flame-bg" style={{ padding: "var(--space-8) 0" }}>
+      <section className="rs-band rs-logo-watermark" style={{ padding: "var(--space-8) 0" }}>
         <div className="rs-band-inner">
           <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Por qué AR Fuegos</span>
           <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(26px,3vw,34px)", margin: "0 0 var(--space-6)", maxWidth: "36ch" }}>Todo lo bueno de comprar en una ferretería de barrio, sin salir de casa.</h2>

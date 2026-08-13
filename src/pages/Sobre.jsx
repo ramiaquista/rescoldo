@@ -15,7 +15,7 @@ export default function Sobre() {
         </figure>
       </section>
 
-      <section className="rs-band rs-flame-bg" style={{ padding: "var(--space-7) 0" }}>
+      <section className="rs-band rs-logo-watermark" style={{ padding: "var(--space-7) 0" }}>
         <div className="rs-band-inner">
           <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Cómo somos</span>
           <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(24px,2.8vw,32px)", margin: "0 0 var(--space-6)", maxWidth: "38ch" }}>Cuatro cosas que no cambiamos</h2>
