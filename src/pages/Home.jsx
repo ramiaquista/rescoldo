@@ -6,12 +6,12 @@ import { waLink } from "../config";
 export default function Home() {
   return (
     <>
-      <section className="rs-grid-2" style={{ position: "relative", overflow: "hidden", padding: "calc(var(--space-8)*1.4) 0 var(--space-8)", gap: "var(--space-8)", alignItems: "center" }}>
+      <section className="rs-grid-2" style={{ position: "relative", zIndex: 0, overflow: "hidden", padding: "calc(var(--space-8)*1.4) 0 var(--space-8)", gap: "var(--space-8)", alignItems: "center" }}>
         <div
           style={{
-            position: "absolute", right: -200, top: -140, width: 680, height: 680, borderRadius: "50%",
-            background: "radial-gradient(circle, var(--color-accent-400) 0%, var(--color-accent-300) 32%, transparent 68%)",
-            filter: "blur(50px)", opacity: 0.6, zIndex: -1,
+            position: "absolute", right: -80, top: -70, width: 520, height: 520, borderRadius: "50%",
+            background: "radial-gradient(circle, var(--color-accent-500) 0%, var(--color-accent) 38%, transparent 70%)",
+            filter: "blur(30px)", opacity: 0.85, zIndex: -1,
           }}
         ></div>
         <div>
@@ -28,7 +28,7 @@ export default function Home() {
         </figure>
       </section>
 
-      <section style={{ position: "relative", overflow: "hidden", padding: "var(--space-8) 0" }}>
+      <section style={{ position: "relative", zIndex: 0, overflow: "hidden", padding: "var(--space-8) 0" }}>
         <div style={{ position: "absolute", left: -120, bottom: -140, width: 320, height: 320, borderRadius: "50%", background: "var(--color-accent-100)", filter: "blur(10px)", opacity: 0.7, zIndex: -1 }}></div>
 
         <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Por qué AR Fuegos</span>
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section style={{ position: "relative", overflow: "hidden", padding: "var(--space-8) 0" }}>
+      <section style={{ position: "relative", zIndex: 0, overflow: "hidden", padding: "var(--space-8) 0" }}>
         <div style={{ position: "absolute", right: -130, top: -60, width: 300, height: 300, borderRadius: "50%", background: "var(--color-accent-2-200)", filter: "blur(10px)", opacity: 0.6, zIndex: -1 }}></div>
 
         <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Cómo compras</span>

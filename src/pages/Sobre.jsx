@@ -15,7 +15,7 @@ export default function Sobre() {
         </figure>
       </section>
 
-      <section style={{ position: "relative", overflow: "hidden", padding: "var(--space-7) 0" }}>
+      <section style={{ position: "relative", zIndex: 0, overflow: "hidden", padding: "var(--space-7) 0" }}>
         <div style={{ position: "absolute", left: "50%", top: -100, width: 340, height: 340, borderRadius: "50%", background: "var(--color-accent-2-200)", filter: "blur(10px)", opacity: 0.5, zIndex: -1 }}></div>
 
         <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Cómo somos</span>
