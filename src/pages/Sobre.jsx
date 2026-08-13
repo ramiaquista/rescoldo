@@ -8,7 +8,7 @@ export default function Sobre() {
         <div>
           <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Nuestra historia</span>
           <h1 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(32px,4.2vw,50px)", lineHeight: 1.1, margin: 0 }}>Somos el amigo que sabe de asados, no la ferretería de la esquina.</h1>
-          <p style={{ fontSize: 16, lineHeight: 1.65, maxWidth: "52ch", margin: "var(--space-5) 0 0", color: "color-mix(in srgb, var(--color-text) 80%, transparent)" }}>Rescoldo nació de una idea simple: conseguir un buen fogonero o asador no debería ser complicado, ni caro, ni una apuesta a ciegas con un vendedor sin nombre. Armamos una línea completa de productos de fuego y asado para que equipar tu patio o terraza sea fácil, con buen rollo y sin sorpresas.</p>
+          <p style={{ fontSize: 16, lineHeight: 1.65, maxWidth: "52ch", margin: "var(--space-5) 0 0", color: "color-mix(in srgb, var(--color-text) 80%, transparent)" }}>AR Fuegos nació de una idea simple: conseguir un buen fogonero o asador no debería ser complicado, ni caro, ni una apuesta a ciegas con un vendedor sin nombre. Armamos una línea completa de productos de fuego y asado para que equipar tu patio o terraza sea fácil, con buen rollo y sin sorpresas.</p>
         </div>
         <figure style={{ margin: 0, borderRadius: "calc(2*var(--radius-lg))", overflow: "hidden" }}>
           <ImagePlaceholder src="/products/hero-main.webp" label="Foto de una quedada" style={{ width: "100%", aspectRatio: "4/3" }} />

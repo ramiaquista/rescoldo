@@ -25,7 +25,7 @@ export default function Home() {
       <section style={{ position: "relative", overflow: "hidden", padding: "var(--space-8) 0" }}>
         <div style={{ position: "absolute", left: -120, bottom: -140, width: 320, height: 320, borderRadius: "50%", background: "var(--color-accent-100)", filter: "blur(10px)", opacity: 0.7, zIndex: -1 }}></div>
 
-        <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Por qué Rescoldo</span>
+        <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Por qué AR Fuegos</span>
         <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(26px,3vw,34px)", margin: "0 0 var(--space-6)", maxWidth: "36ch" }}>Todo lo bueno de comprar en una ferretería de barrio, sin salir de casa.</h2>
 
         <div className="rs-grid-3" style={{ gap: "var(--space-6)" }}>
