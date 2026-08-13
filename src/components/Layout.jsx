@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { waLink, INSTAGRAM_URL } from "../config";
 
@@ -18,6 +18,11 @@ function NavItem({ to, end, children, onClick }) {
 export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
 
   return (
     <div style={{ background: "var(--color-bg)", color: "var(--color-text)", fontFamily: "var(--font-body)", minHeight: "100vh" }}>
