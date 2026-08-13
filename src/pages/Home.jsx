@@ -7,7 +7,13 @@ export default function Home() {
   return (
     <>
       <section className="rs-grid-2" style={{ position: "relative", overflow: "hidden", padding: "calc(var(--space-8)*1.4) 0 var(--space-8)", gap: "var(--space-8)", alignItems: "center" }}>
-        <div style={{ position: "absolute", right: -140, top: -160, width: 360, height: 360, borderRadius: "50%", background: "var(--color-accent-2-200)", zIndex: -1 }}></div>
+        <div
+          style={{
+            position: "absolute", right: -200, top: -140, width: 680, height: 680, borderRadius: "50%",
+            background: "radial-gradient(circle, var(--color-accent-400) 0%, var(--color-accent-300) 32%, transparent 68%)",
+            filter: "blur(50px)", opacity: 0.6, zIndex: -1,
+          }}
+        ></div>
         <div>
           <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Fogoneros y asadores</span>
           <h1 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(38px,5.2vw,64px)", lineHeight: 1.08, margin: 0 }}>El fuego, fácil,<br />accesible y para todos.</h1>
