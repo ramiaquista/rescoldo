@@ -1,11 +1,13 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { waLink, INSTAGRAM_URL } from "../config";
 
-function NavItem({ to, end, children }) {
+function NavItem({ to, end, children, onClick }) {
   return (
     <NavLink
       to={to}
       end={end}
+      onClick={onClick}
       style={({ isActive }) => (isActive ? { color: "var(--color-accent)" } : undefined)}
     >
       {children}
@@ -14,20 +16,38 @@ function NavItem({ to, end, children }) {
 }
 
 export default function Layout({ children }) {
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+
   return (
     <div style={{ background: "var(--color-bg)", color: "var(--color-text)", fontFamily: "var(--font-body)", minHeight: "100vh" }}>
       <nav className="nav" style={{ paddingInline: "max(var(--space-6), calc((100% - 1200px)/2 + var(--space-6)))" }}>
-        <Link to="/" className="nav-brand">Rescoldo</Link>
-        <NavItem to="/" end>Inicio</NavItem>
-        <NavItem to="/catalogo">Catálogo</NavItem>
-        <NavItem to="/sobre">Nosotros</NavItem>
-        <a href={waLink()} className="btn btn-primary" target="_blank" rel="noopener noreferrer">Escríbenos</a>
+        <Link to="/" className="nav-brand" onClick={close}>Rescoldo</Link>
+
+        <button
+          type="button"
+          className="nav-toggle"
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+            {open ? <path d="M6 6 18 18M18 6 6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+          </svg>
+        </button>
+
+        <div className={`nav-links${open ? " open" : ""}`}>
+          <NavItem to="/" end onClick={close}>Inicio</NavItem>
+          <NavItem to="/catalogo" onClick={close}>Catálogo</NavItem>
+          <NavItem to="/sobre" onClick={close}>Nosotros</NavItem>
+          <a href={waLink()} className="btn btn-primary" target="_blank" rel="noopener noreferrer" onClick={close}>Escríbenos</a>
+        </div>
       </nav>
 
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 var(--space-6)" }}>{children}</div>
 
       <footer style={{ borderTop: "1px solid var(--color-neutral-200)", padding: "var(--space-7) 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 var(--space-6)", display: "grid", gridTemplateColumns: "repeat(4,minmax(0,1fr))", gap: "var(--space-6)" }}>
+        <div className="rs-grid-4-tight" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 var(--space-6)", gap: "var(--space-6)" }}>
           <div>
             <span className="nav-brand" style={{ display: "block", marginBottom: "var(--space-2)" }}>Rescoldo</span>
             <p style={{ margin: 0, fontSize: 14, color: "color-mix(in srgb, var(--color-text) 70%, transparent)", maxWidth: "32ch" }}>Fogoneros y asadores para juntarte con los tuyos, sin gastar de más.</p>

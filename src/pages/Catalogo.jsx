@@ -27,7 +27,7 @@ export default function Catalogo() {
       {CATEGORIES.map((c) => (
         <section key={c.id} id={c.id} style={{ padding: "var(--space-6) 0" }}>
           <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: 26, margin: "0 0 var(--space-4)" }}>{c.label}</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,minmax(0,1fr))", gap: "var(--space-4)" }}>
+          <div className="rs-grid-4" style={{ gap: "var(--space-4)" }}>
             {productsByCategory(c.id).map((p) => (
               <Link key={p.slug} to={`/producto/${p.slug}`} className="card" style={{ textDecoration: "none", color: "inherit", padding: 0, overflow: "hidden" }}>
                 <ImagePlaceholder label={p.name} style={{ width: "100%", aspectRatio: "1" }} />

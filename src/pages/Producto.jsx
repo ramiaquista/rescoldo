@@ -24,12 +24,12 @@ export default function Producto() {
         <Link to="/catalogo">Catálogo</Link> / <Link to={`/catalogo#${product.category}`}>{categoryLabel(product.category)}</Link> / {product.name}
       </div>
 
-      <section style={{ padding: "var(--space-4) 0 var(--space-7)", display: "grid", gridTemplateColumns: "minmax(0,1.1fr) minmax(0,1fr)", gap: "var(--space-7)", alignItems: "start" }}>
+      <section className="rs-grid-2" style={{ padding: "var(--space-4) 0 var(--space-7)", gap: "var(--space-7)", alignItems: "start" }}>
         <div>
           <figure className="washed" style={{ margin: 0, borderRadius: "calc(2*var(--radius-lg))", overflow: "hidden" }}>
             <ImagePlaceholder label="Foto principal del producto" style={{ width: "100%", aspectRatio: "1" }} />
           </figure>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,minmax(0,1fr))", gap: "var(--space-3)", marginTop: "var(--space-3)" }}>
+          <div className="rs-grid-4" style={{ gap: "var(--space-3)", marginTop: "var(--space-3)" }}>
             {["Foto 2", "Foto 3", "Foto 4", "En uso"].map((l) => (
               <ImagePlaceholder key={l} shape="rounded" label={l} style={{ width: "100%", aspectRatio: "1" }} />
             ))}
@@ -63,7 +63,7 @@ export default function Producto() {
 
       <section style={{ padding: "var(--space-6) 0 var(--space-8)" }}>
         <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: 24, margin: "0 0 var(--space-4)" }}>También te puede interesar</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,minmax(0,1fr))", gap: "var(--space-4)" }}>
+        <div className="rs-grid-4" style={{ gap: "var(--space-4)" }}>
           {related.map((p) => (
             <Link key={p.slug} to={`/producto/${p.slug}`} className="card" style={{ textDecoration: "none", color: "inherit", padding: 0, overflow: "hidden" }}>
               <ImagePlaceholder label={p.name} style={{ width: "100%", aspectRatio: "1" }} />

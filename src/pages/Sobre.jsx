@@ -4,7 +4,7 @@ import { waLink } from "../config";
 export default function Sobre() {
   return (
     <>
-      <section style={{ padding: "var(--space-7) 0 var(--space-7)", display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(0,0.9fr)", gap: "var(--space-7)", alignItems: "center" }}>
+      <section className="rs-grid-2" style={{ padding: "var(--space-7) 0 var(--space-7)", gap: "var(--space-7)", alignItems: "center" }}>
         <div>
           <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Nuestra historia</span>
           <h1 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(32px,4.2vw,50px)", lineHeight: 1.1, margin: 0 }}>Somos el amigo que sabe de asados, no la ferretería de la esquina.</h1>
@@ -21,7 +21,7 @@ export default function Sobre() {
         <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Cómo somos</span>
         <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(24px,2.8vw,32px)", margin: "0 0 var(--space-6)", maxWidth: "38ch" }}>Cuatro cosas que no cambiamos</h2>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,minmax(0,1fr))", gap: "var(--space-4)" }}>
+        <div className="rs-grid-4-tight" style={{ gap: "var(--space-4)" }}>
           {[
             {
               bg: "var(--color-accent-100)", fg: "var(--color-accent-700)",
@@ -55,7 +55,7 @@ export default function Sobre() {
         </div>
       </section>
 
-      <section id="envios" style={{ padding: "var(--space-7) 0", display: "grid", gridTemplateColumns: "minmax(0,0.9fr) minmax(0,1fr)", gap: "var(--space-7)", alignItems: "center" }}>
+      <section id="envios" className="rs-grid-2" style={{ padding: "var(--space-7) 0", gap: "var(--space-7)", alignItems: "center" }}>
         <figure className="washed" style={{ margin: 0, borderRadius: "calc(2*var(--radius-lg))", overflow: "hidden" }}>
           <ImagePlaceholder label="Foto de producto embalado" style={{ width: "100%", aspectRatio: "4/3" }} />
         </figure>

@@ -6,7 +6,7 @@ import { waLink, INSTAGRAM_URL } from "../config";
 export default function Home() {
   return (
     <>
-      <section style={{ position: "relative", padding: "calc(var(--space-8)*1.4) 0 var(--space-8)", display: "grid", gridTemplateColumns: "minmax(0,1.05fr) minmax(0,0.95fr)", gap: "var(--space-8)", alignItems: "center" }}>
+      <section className="rs-grid-2" style={{ position: "relative", overflow: "hidden", padding: "calc(var(--space-8)*1.4) 0 var(--space-8)", gap: "var(--space-8)", alignItems: "center" }}>
         <div style={{ position: "absolute", right: -140, top: -160, width: 360, height: 360, borderRadius: "50%", background: "var(--color-accent-2-200)", zIndex: -1 }}></div>
         <div>
           <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Fogoneros y asadores</span>
@@ -28,7 +28,7 @@ export default function Home() {
         <span style={{ display: "block", fontSize: 13, letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 600, color: "var(--color-accent-700)", marginBottom: "var(--space-3)" }}>Por qué Rescoldo</span>
         <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(26px,3vw,34px)", margin: "0 0 var(--space-6)", maxWidth: "36ch" }}>Todo lo bueno de comprar en una ferretería de barrio, sin salir de casa.</h2>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: "var(--space-6)" }}>
+        <div className="rs-grid-3" style={{ gap: "var(--space-6)" }}>
           {[
             {
               bg: "var(--color-accent-100)", fg: "var(--color-accent-700)",
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
           <Link to="/catalogo" className="btn btn-secondary">Ver todo el catálogo</Link>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(5,minmax(0,1fr))", gap: "var(--space-4)" }}>
+        <div className="rs-grid-5" style={{ gap: "var(--space-4)" }}>
           {CATEGORIES.map((c) => (
             <Link key={c.id} to={`/catalogo#${c.id}`} className="card" style={{ textDecoration: "none", color: "inherit", padding: 0, overflow: "hidden" }}>
               <ImagePlaceholder label={c.label} style={{ width: "100%", aspectRatio: "1" }} />
@@ -89,9 +89,9 @@ export default function Home() {
         <h2 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: "clamp(26px,3vw,34px)", margin: "0 0 var(--space-6)", maxWidth: "36ch" }}>De la idea a tu patio, en tres pasos</h2>
 
         <div style={{ position: "relative" }}>
-          <div style={{ position: "absolute", left: "16.5%", right: "16.5%", top: 27, height: 2, backgroundImage: "repeating-linear-gradient(to right, var(--color-accent-300) 0 10px, transparent 10px 20px)", zIndex: 0 }}></div>
+          <div className="rs-step-line" style={{ position: "absolute", left: "16.5%", right: "16.5%", top: 27, height: 2, backgroundImage: "repeating-linear-gradient(to right, var(--color-accent-300) 0 10px, transparent 10px 20px)", zIndex: 0 }}></div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: "var(--space-5)" }}>
+          <div className="rs-grid-3" style={{ gap: "var(--space-5)" }}>
             {[
               { n: "1", title: "Elige tu producto", body: "Medidas, materiales y fotos reales en cada ficha. Sin sorpresas." },
               { n: "2", title: "Coordinamos por WhatsApp", body: "Confirmamos stock, forma de pago y envío. Cuotas disponibles." },
@@ -124,7 +124,7 @@ export default function Home() {
           </div>
           <a href={INSTAGRAM_URL} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">Síguenos @rescoldo</a>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,minmax(0,1fr))", gap: "var(--space-3)" }}>
+        <div className="rs-grid-4" style={{ gap: "var(--space-3)" }}>
           {[1, 2, 3, 4].map((i) => (
             <ImagePlaceholder key={i} shape="rounded" label="Foto de Instagram" style={{ width: "100%", aspectRatio: "1" }} />
           ))}
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
 
       <section style={{ padding: "var(--space-8) 0 calc(var(--space-8)*1.3)" }}>
-        <div style={{ background: "var(--color-accent-2-100)", borderRadius: "calc(2*var(--radius-lg))", padding: "var(--space-7) clamp(24px,4vw,56px)", display: "grid", gridTemplateColumns: "minmax(0,1fr) auto", gap: "var(--space-6)", alignItems: "center" }}>
+        <div className="rs-cta" style={{ background: "var(--color-accent-2-100)", borderRadius: "calc(2*var(--radius-lg))", padding: "var(--space-7) clamp(24px,4vw,56px)", display: "grid", gridTemplateColumns: "minmax(0,1fr) auto", gap: "var(--space-6)", alignItems: "center" }}>
           <div>
             <h3 style={{ fontFamily: "var(--font-heading)", fontWeight: "var(--font-heading-weight)", fontSize: 26, margin: 0 }}>¿Listo para tu próxima quedada?</h3>
             <p style={{ margin: "var(--space-2) 0 0", fontSize: 15.5, lineHeight: 1.6, color: "color-mix(in srgb, var(--color-text) 78%, transparent)", maxWidth: "56ch" }}>Cuéntanos qué necesitas y te ayudamos a elegir. Respondemos rápido, sin vueltas.</p>
